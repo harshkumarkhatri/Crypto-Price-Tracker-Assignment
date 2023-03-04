@@ -12,6 +12,9 @@ Map<String, Coin> parseCoinData(String responseBody) {
   return newMap;
 }
 
+// Currently taking key from secret file
+// Can also use an api which will be providing us with
+// tokens on basis of which key could be generated
 Map<String, String> get headers => {
       "X-CMC_PRO_API_KEY": secretKey,
     };
