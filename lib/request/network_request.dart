@@ -19,9 +19,9 @@ Map<String, String> get headers => {
       "X-CMC_PRO_API_KEY": secretKey,
     };
 
-Future<Map<String, Coin>> getCoinData() async {
+Future<Map<String, Coin>> getCoinData(String params) async {
   final queryParam = {
-    "symbol": "BTC,ETH,LTC",
+    "symbol": params,
   };
   var url = Uri.https('pro-api.coinmarketcap.com',
       '/v1/cryptocurrency/quotes/latest', queryParam);
